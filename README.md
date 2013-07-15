@@ -12,10 +12,10 @@ An example of the scripts in action may be seen [here](http://www.hpcvis.com/vis
 * Overlays
 
 # Install
-1 `.scm` files should be installed in ` ~/.gimp-$VER/scripts/`
-2 `.sh` files are used to drive Gimp and could be put somewhere in yout `$PATH` or called directly.
+1. `.scm` files should be installed in ` ~/.gimp-$VER/scripts/`
+2. `.sh` files are used to drive Gimp and could be put somewhere in yout `$PATH` or called directly.
 
 # todo
-1 documentation
-2 only tested or used with Gimp 2.6
-3 make install script
+1. documentation
+2. only tested or used with Gimp 2.6
+3. make install script
