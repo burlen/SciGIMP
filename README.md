@@ -9,8 +9,8 @@ This is an example of the scripts in action:
 * Annotation
 * Axes and labeling
 * Grid generation
-* Scaling
-* Overlays
+* Cropping and Scaling
+* Image overlays
 
 # Install
 1. `.scm` files should be installed in ` ~/.gimp-$VER/scripts/`
