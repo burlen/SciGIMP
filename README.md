@@ -19,3 +19,4 @@ An example of the scripts in action may be seen [here](http://www.hpcvis.com/vis
 1. documentation
 2. only tested or used with Gimp 2.6
 3. make install script
+4. Make a LUT reader for PV xml format
