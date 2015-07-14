@@ -5,7 +5,7 @@
 ;
 ; Copyright 2014 Burlen Loring
 (define
-  (sq-overlay inFile overlayFile outFile x0 y0)
+  (sq-overlay inFile overlayFile outFile x0 y0 a0 a1 m1)
     (let*
       (
       ; load background the im
@@ -14,8 +14,13 @@
       ; load the overlay im
       (la (car (gimp-file-load-layer RUN-NONINTERACTIVE im overlayFile)))
       )
+      ; add alpha channel, and set the alpha and blend mode for these layers
       (gimp-layer-add-alpha dw)
+      (gimp-layer-set-opacity dw (string->number a0))
+
       (gimp-layer-add-alpha la)
+      (gimp-layer-set-opacity la (string->number a1))
+      (gimp-layer-set-mode la (string->number m1))
 
       ; debug
       ; (gimp-message-set-handler ERROR-CONSOLE)
