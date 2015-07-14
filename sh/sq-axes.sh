@@ -184,9 +184,9 @@ then
   LABEL_FONT_FACE="Liberation Serif Bold"
 fi
 
-if [[ -z "$Y_FIGLET" ]]
+if [[ -z "$FIGLET" ]]
 then
-  Y_FIGLET=""
+  FIGLET=""
 fi
 
 if [[ -z "$FIGLET_FONT_SIZE" ]]
@@ -206,5 +206,7 @@ then
 fi
 
 #gimp -i -b "(sq-axes \"$INPUT\" \"$OUTPUT\" \"$X_LOW\" \"$X_HIGH\" \"$N_MAJOR_X\" \"$N_MINOR_X\" \"$LABEL_FREQ_X\" \"$Y_LOW\" \"$Y_HIGH\" \"$N_MAJOR_Y\" \"$N_MINOR_Y\" \"$LABEL_FREQ_Y\" \"$MAJOR_TICK_WIDTH\" \"$MAJOR_TICK_LENGTH\" \"$MINOR_TICK_WIDTH\" \"$MINOR_TICK_LENGTH\" \"$GRID_LINE_LEN\" \"$GRID_LINE_WID\" \"$TICK_PRECISION\" \"$TICK_FONT_FACE\" \"$TICK_FONT_SIZE\" \"$TICK_FONT_COLOR\" \"$X_LABEL\" \"$Y_LABEL\" \"$LABEL_FONT_FACE\" \"$LABEL_FONT_SIZE\" \"$LABEL_FONT_COLOR\" \"$FIGLET\" \"$FIGLET_FONT_FACE\" \"$FIGLET_FONT_SIZE\" \"$FIGLET_FONT_COLOR\")" -b "(gimp-quit 0)"
+
+echo "gimp -i -b \"(sq-axes \\\"$INPUT\\\" \\\"$OUTPUT\\\" \\\"$X_LOW\\\" \\\"$X_HIGH\\\" \\\"$N_MAJOR_X\\\" \\\"$N_MINOR_X\\\" \\\"$LABEL_FREQ_X\\\" \\\"$Y_LOW\\\" \\\"$Y_HIGH\\\" \\\"$N_MAJOR_Y\\\" \\\"$N_MINOR_Y\\\" \\\"$LABEL_FREQ_Y\\\" \\\"$MAJOR_TICK_WIDTH\\\" \\\"$MAJOR_TICK_LENGTH\\\" \\\"$MINOR_TICK_WIDTH\\\" \\\"$MINOR_TICK_LENGTH\\\" \\\"$TICK_PRECISION\\\" \\\"$TICK_FONT_FACE\\\" \\\"$TICK_FONT_SIZE\\\" \\\"$TICK_FONT_COLOR\\\" \\\"$X_LABEL\\\" \\\"$Y_LABEL\\\" \\\"$LABEL_FONT_FACE\\\" \\\"$LABEL_FONT_SIZE\\\" \\\"$LABEL_FONT_COLOR\\\" \\\"$FIGLET\\\" \\\"$FIGLET_FONT_FACE\\\" \\\"$FIGLET_FONT_SIZE\\\" \\\"$FIGLET_FONT_COLOR\\\")\" -b \"(gimp-quit 0)\""
 
 gimp -i -b "(sq-axes \"$INPUT\" \"$OUTPUT\" \"$X_LOW\" \"$X_HIGH\" \"$N_MAJOR_X\" \"$N_MINOR_X\" \"$LABEL_FREQ_X\" \"$Y_LOW\" \"$Y_HIGH\" \"$N_MAJOR_Y\" \"$N_MINOR_Y\" \"$LABEL_FREQ_Y\" \"$MAJOR_TICK_WIDTH\" \"$MAJOR_TICK_LENGTH\" \"$MINOR_TICK_WIDTH\" \"$MINOR_TICK_LENGTH\" \"$TICK_PRECISION\" \"$TICK_FONT_FACE\" \"$TICK_FONT_SIZE\" \"$TICK_FONT_COLOR\" \"$X_LABEL\" \"$Y_LABEL\" \"$LABEL_FONT_FACE\" \"$LABEL_FONT_SIZE\" \"$LABEL_FONT_COLOR\" \"$FIGLET\" \"$FIGLET_FONT_FACE\" \"$FIGLET_FONT_SIZE\" \"$FIGLET_FONT_COLOR\")" -b "(gimp-quit 0)"

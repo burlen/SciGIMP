@@ -180,6 +180,7 @@
       ; load the original
       (set! im (car (gimp-file-load RUN-NONINTERACTIVE inFile inFile)))
       (set! dw (car (gimp-image-get-active-layer im)))
+      (gimp-layer-add-alpha dw)
 
       ; initialize parameters
       (set! imw (car (gimp-drawable-width dw)))
@@ -231,7 +232,7 @@
         )
         ((string=? tickFontColor "g")
           (gimp-context-set-background '(  0   0   0))
-          (gimp-context-set-foreground '(145 145 145))
+          (gimp-context-set-foreground '(45 45 45))
         )
       )
 
@@ -474,6 +475,7 @@
 
       (if (not (string=? figlet ""))
         (begin
+          ; draw figlet
           (gimp-floating-sel-to-layer
             (car
               (gimp-text-fontname
@@ -492,17 +494,8 @@
           (set! tl (car (gimp-image-get-active-layer im)))
           (set! tw (car (gimp-drawable-width tl)))
           (set! th (car (gimp-drawable-height tl)))
-          (if (> nltiy 0)
-            (begin
-              (set! x (- ytlx tw))
-              (set! y (+ tm ifpx))
-            )
-          ;else
-            (begin
-              (set! x (- lm tw fs))
-              (set! y (+ tm imh lth fs fs lfpx lfpx))
-            )
-          )
+          (set! x (- (+ lm (/ imw 2.0)) (/ tw 2.0)))
+          (set! y (- tm (* 1.1 ifpx)))
           (gimp-layer-set-offsets tl x y)
         )
       )
