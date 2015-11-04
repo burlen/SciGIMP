@@ -50,11 +50,11 @@ fi
 
 if [[ -z "$FONT_FACE" ]]
 then
-  #FONT_FACE="DejaVu Sans Bold"
+  FONT_FACE="DejaVu Sans Bold"
   #FONT_FACE="Monospace Bold"
   #FONT_FACE="Bitstream Vera Sans Bold Oblique"
   #FONT_FACE="Neuropol X"
-  FONT_FACE="01 Digitall"
+  #FONT_FACE="01 Digitall"
 fi
 
 

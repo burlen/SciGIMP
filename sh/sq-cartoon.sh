@@ -9,7 +9,7 @@
 if [[ $# -lt 2 ]]
 then
   echo "usage:"
-  echo "sq-blur.sh /path/to/input /path/to/output radius"
+  echo "sq-cartoon.sh /path/to/input /path/to/output radius(>1.0) ammount(0.0 - 10.0) threshold(0 - 255)"
   echo ""
   exit -1
 fi
@@ -17,10 +17,16 @@ fi
 INPUT=$1
 OUTPUT=$2
 RAD=$3
+PCT=$4
 
 if [[ -z "$RAD" ]]
 then
-  RAD=1
+  RAD=5.0
 fi
 
-gimp -i -b "(sq-blur \"$INPUT\" \"$OUTPUT\" \"$RAD\")" -b "(gimp-quit 0)"
+if [[ -z "$PCT" ]]
+then
+  PCT=0.2
+fi
+
+gimp -i -b "(sq-cartoon \"$INPUT\" \"$OUTPUT\" \"$RAD\" \"$PCT\")" -b "(gimp-quit 0)"

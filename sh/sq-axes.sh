@@ -109,7 +109,7 @@ fi
 
 if [[ -z "$MAJOR_TICK_WIDTH" ]]
 then
-  MAJOR_TICK_WIDTH=0.05
+  MAJOR_TICK_WIDTH=0.01
 fi
 
 if [[ -z "$MAJOR_TICK_LENGTH" ]]
@@ -119,12 +119,12 @@ fi
 
 if [[ -z "$MINOR_TICK_WIDTH" ]]
 then
-  MINOR_TICK_WIDTH=0.01
+  MINOR_TICK_WIDTH=0.008
 fi
 
 if [[ -z "$MINOR_TICK_LENGTH" ]]
 then
-  MINOR_TICK_LENGTH=0.6
+  MINOR_TICK_LENGTH=0.4
 fi
 
 if [[ -z "$GRID_LINE_LEN" ]]
@@ -144,7 +144,7 @@ fi
 
 if [[ -z "$TICK_FONT_SIZE" ]]
 then
-  TICK_FONT_SIZE=25
+  TICK_FONT_SIZE=16
 fi
 
 if [[ -z "$TICK_FONT_COLOR" ]]
@@ -170,7 +170,7 @@ fi
 
 if [[ -z "$LABEL_FONT_SIZE" ]]
 then
-  LABEL_FONT_SIZE=36
+  LABEL_FONT_SIZE=20
 fi
 
 if [[ -z "$LABEL_FONT_COLOR" ]]
@@ -191,7 +191,7 @@ fi
 
 if [[ -z "$FIGLET_FONT_SIZE" ]]
 then
-  FIGLET_FONT_SIZE=36
+  FIGLET_FONT_SIZE=24
 fi
 
 if [[ -z "$FIGLET_FONT_COLOR" ]]

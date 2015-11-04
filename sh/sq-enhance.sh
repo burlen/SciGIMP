@@ -9,18 +9,13 @@
 if [[ $# -lt 2 ]]
 then
   echo "usage:"
-  echo "sq-blur.sh /path/to/input /path/to/output radius"
+  echo "sq-enhance.sh /path/to/input /path/to/output"
   echo ""
   exit -1
 fi
 
 INPUT=$1
 OUTPUT=$2
-RAD=$3
 
-if [[ -z "$RAD" ]]
-then
-  RAD=1
-fi
+gimp -i -b "(sq-enhance \"$INPUT\" \"$OUTPUT\")" -b "(gimp-quit 0)"
 
-gimp -i -b "(sq-blur \"$INPUT\" \"$OUTPUT\" \"$RAD\")" -b "(gimp-quit 0)"

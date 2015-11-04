@@ -9,7 +9,7 @@
 if [[ $# -lt 2 ]]
 then
   echo "usage:"
-  echo "sq-blur.sh /path/to/input /path/to/output radius"
+  echo "sq-unsharp.sh /path/to/input /path/to/output radius(>1.0) ammount(0.0 - 10.0) threshold(0 - 255)"
   echo ""
   exit -1
 fi
@@ -17,10 +17,23 @@ fi
 INPUT=$1
 OUTPUT=$2
 RAD=$3
+AMT=$4
+THR=$5
 
 if [[ -z "$RAD" ]]
 then
-  RAD=1
+  RAD=3.0
 fi
 
-gimp -i -b "(sq-blur \"$INPUT\" \"$OUTPUT\" \"$RAD\")" -b "(gimp-quit 0)"
+if [[ -z "$AMT" ]]
+then
+  AMT=1.0
+fi
+
+if [[ -z "$THR" ]]
+then
+  THR=0
+fi
+
+gimp -i -b "(sq-unsharp \"$INPUT\" \"$OUTPUT\" \"$RAD\" \"$AMT\" \"$THR\")" -b "(gimp-quit 0)"
+
