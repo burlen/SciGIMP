@@ -495,7 +495,7 @@
           (set! tw (car (gimp-drawable-width tl)))
           (set! th (car (gimp-drawable-height tl)))
           (set! x (- (+ lm (/ imw 2.0)) (/ tw 2.0)))
-          (set! y (- tm (* 1.1 ifpx)))
+          (set! y (- tm (* 1.5 ifpx)))
           (gimp-layer-set-offsets tl x y)
         )
       )
