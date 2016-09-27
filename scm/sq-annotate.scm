@@ -28,8 +28,9 @@
       (drpr 0)    ; drop radius
       (im   0)    ; image
       (dw   0)    ; drawable
-
       )
+
+      (gimp-message-set-handler ERROR-CONSOLE)
 
       ; load the original
       (set! im (car (gimp-file-load RUN-NONINTERACTIVE inFile inFile)))
@@ -49,7 +50,6 @@
       (set! th fpx)
 
       ; debug
-      ; (gimp-message-set-handler ERROR-CONSOLE)
       ; (gimp-message inFile)
       ; (gimp-message outFile)
       ; (gimp-message text)
@@ -90,22 +90,12 @@
           (gimp-context-set-foreground '(  0   0   0)))
         ((string=? fontColor "g")
           (gimp-context-set-background '(  0   0   0))
-          (gimp-context-set-foreground '(145 145 145))))
+          (gimp-context-set-foreground '(145 145 145)))
+        (else (gimp-message (string-append fontColor
+            " is not a supported color code")))
+        )
 
-      (set! tl
-        (car
-          (gimp-text-fontname
-              im
-              dw
-              x
-              y
-              text
-              0
-              TRUE
-              fpx
-              PIXELS
-              fontFace)))
-
+      (set! tl (car (gimp-text-fontname im dw x y text 0 TRUE fpx PIXELS fontFace)))
       (gimp-floating-sel-to-layer tl)
       (set! tl (car (gimp-image-get-active-layer im)))
 
@@ -138,4 +128,3 @@
       (gimp-image-delete im)
    )
 )
-
