@@ -1,15 +1,15 @@
 #!/bin/bash
-#   ____    _ __           ____               __    ____
-#  / __/___(_) /  ___ ____/ __ \__ _____ ___ / /_  /  _/__  ____
-# _\ \/ __/ / _ \/ -_) __/ /_/ / // / -_|_-</ __/ _/ // _ \/ __/
-#/___/\__/_/_.__/\__/_/  \___\_\_,_/\__/___/\__/ /___/_//_/\__(_)
+#    ____    _ ___________  ______
+#   / __/___(_) ___/  _/  |/  / _ \
+#  _\ \/ __/ / (_ // // /|_/ / ___/
+# /___/\__/_/\___/___/_/  /_/_/
 #
-#Copyright 2010 SciberQuest Inc.
+# Copyright 2016 Burlen Loring
 
 if [[ $# -lt 3 ]]
 then
   echo "usage:"
-  echo "overlay.sh /path/to/input /path/to/overlay /path/to/output posX posY alpha0 alpha1 mode1"
+  echo "sq-overlay.sh /path/to/input /path/to/overlay /path/to/output posX posY alpha0 alpha1 mode1"
   echo "modes are:"
   echo "NORMAL-MODE (0), DISSOLVE-MODE (1), BEHIND-MODE (2), MULTIPLY-MODE (3), SCREEN-MODE (4), OVERLAY-MODE (5), DIFFERENCE-MODE (6), ADDITION-MODE (7), SUBTRACT-MODE (8), DARKEN-ONLY-MODE (9), LIGHTEN-ONLY-MODE (10), HUE-MODE (11), SATURATION-MODE (12), COLOR-MODE (13), VALUE-MODE (14), DIVIDE-MODE (15), DODGE-MODE (16), BURN-MODE (17), HARDLIGHT-MODE (18), SOFTLIGHT-MODE (19), GRAIN-EXTRACT-MODE (20), GRAIN-MERGE-MODE (21), COLOR-ERASE-MODE (22), ERASE-MODE (23), REPLACE-MODE (24), ANTI-ERASE-MODE (25)"
   echo ""

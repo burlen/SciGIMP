@@ -4,11 +4,11 @@
 # _\ \/ __/ / _ \/ -_) __/ /_/ / // / -_|_-</ __/ _/ // _ \/ __/
 #/___/\__/_/_.__/\__/_/  \___\_\_,_/\__/___/\__/ /___/_//_/\__(_)
 #
-#Copyright 2010 SciberQuest Inc.
+#Copyright 2016 SciberQuest Inc.
 
 if [ $# -ne 2 ] ; then
   echo "Usage: $0 infile outfile"
   exit 1
 fi
 
-gimp -i -b "(sq-autocrop \"$1\" \"$2\")" -b '(gimp-quit 0)'
+gimp -i -b "(sq-auto-levels \"$1\" \"$2\")" -b '(gimp-quit 0)'

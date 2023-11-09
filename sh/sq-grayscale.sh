@@ -6,10 +6,10 @@
 #
 #Copyright 2010 SciberQuest Inc.
 
-if [[ $# -lt 2 ]]
+if [[ $# -lt 3 ]]
 then
   echo "usage:"
-  echo "sq-blur.sh /path/to/input /path/to/overlay /path/to/output mode"
+  echo "sq-grayscale.sh [input] [output] [mode]"
   echo "DESATURATE-LIGHTNESS (0), DESATURATE-LUMINOSITY (1), DESATURATE-AVERAGE (2)"
   echo ""
   exit -1
@@ -17,7 +17,7 @@ fi
 
 INPUT=$1
 OUTPUT=$2
-RAD=$3
+MODE=$3
 
 if [[ -z "$MODE" ]]
 then
